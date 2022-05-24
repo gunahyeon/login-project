@@ -45,3 +45,6 @@ module.exports = app;
 
 // git about에 가서 description topics 이런거 명시해주면 뭔가 열심히 공부한 티가 나겠지?? ㅇㅇ
 
+// 노드몬 : 라이브 서버 구동 => nodemon ./bin/www.js
+
+
