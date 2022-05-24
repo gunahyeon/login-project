@@ -1,7 +1,6 @@
 //로그인, 회원가입 기능 구현하기.
 "use strict";
 
-const { response } = require("../../app");
 const UserStorage = require("./UserStorage");
 
 class User {
@@ -10,12 +9,16 @@ class User {
         this.body = body;
     }
 
-    login() {
+    async login() {
         const client = this.body;
 
         //변수대신 바로 아이디만 던져서 해당하는 원하는 사용자 정보들을 오브젝트화해서 받자.
         //++ 음 ,, 그럼 비밀번호틀림과 상관없이 비밀번호까지 들고 오는 거 아닌가,,?
-        const {id, psword} = UserStorage.getUserInfo(client.id);
+        //<pending> 이라는 객체가 반환이 되는 것은 비동기처리가 되고 있다는 것, 다 읽을 때까지 기다리라는 의미로 await을 끼워준다.
+        //promise를 반환하는 애에게만 await적용할 수 있음!!! => 가독성
+        //await은 async 함수 내에서만 사용할 수 있음 => 짝궁
+        //async 는 await이 실행되는 함수 앞에서만 걸어줘야한다.
+        const {id, psword} = await UserStorage.getUserInfo(client.id);
         
         //일단 스토리지에 id값이 있는지 확인.
         if(id) {

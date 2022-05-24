@@ -15,11 +15,12 @@ const output = {
 }
 
 const process = {
-    login : (req, res) => {
+    login : async (req, res) => {
         //클래스에 요청데이터를 보내서 user를 인스턴스화(초기화)
         const user = new User(req.body);
         //user login요청
-        const response = user.login();
+        //console은 뜨지만 undefined 가 뜨네 await 붙여주자.
+        const response = await user.login();
         //최종적으로 client 에게 response 전달
         return res.json(response);
 

@@ -1,12 +1,9 @@
 "use strict";
 
+const fs = require("fs").promises;
+
 class UserStorage {
     //외부에서 접근할 수 없게 #를 사용하여 데이터를 은닉화를 한다, 메서드로 접근해야한다. , 바로 지정해서 사용할 수 있게 static화한다.
-    static #users = {
-        id : ["gnh", "구나현", "good"],
-        psword : ["1111", "1234", "123456"],
-        name : ["gnh", "구나현", "good"],
-    };
 
     // static getUsers(...fields) {
     //     // getUsers 파람으로 (선택한)배열이 여러개 들어온다. ex: getUsers("id","psword")
@@ -25,9 +22,9 @@ class UserStorage {
     //     //내가 이해한 것 : 전체 오브젝트에서 새로운 오브젝트를 만들어 리턴하는 과정이다.
     // }
 
-    //아이디 받아서 해당하는 유저 정보 던져주기
-    static getUserInfo(id) {
-        const users = this.#users;
+    // 은닉화한 메서드는 항상 최상단에 올려주는게 좋다. 코딩문화.
+    static #getUserInfo(data, id){
+        const users = JSON.parse(data);
         const idx = users.id.indexOf(id); //입력한 id의 인덱스 찾기.
         const userKeys = Object.keys(users); // => [id, psword, name] : users의 key값들만 배열로 만들기.
         const userInfo = userKeys.reduce((newUser, info)=>{
@@ -36,6 +33,20 @@ class UserStorage {
         }, {});
 
         return userInfo;
+    }
+    static save(userInfo) {
+        // const users = this.#users;
+    }
+
+    //아이디 받아서 해당하는 유저 정보 던져주기
+    static getUserInfo(id) {
+        //promise를 반환하면 then, catch이라는 메서드를 사용할 수 있다.
+        return fs.readFile("./src/databases/users.json") 
+        .then((data)=>{
+            //가독성을 위해 은닉화하여 분리
+            return this.#getUserInfo(data,id);
+        })
+        .catch(console.error);
     }
 }
 

@@ -26,7 +26,7 @@ module.exports = app;
 
 // *** 깃 업로드 과정 ***
 // 깃에 업로드 하기 전 터미널에서 nano README.md => 편하게 작성 , nano .gitignore => /node_modules 는 깃에 업로드 x해주세요!!!!!!! 작성해주기.
-// git add . 하면 모든 파일이 초록색으로 변함. 현재 스테이징 영역에 잘 올라간 것이다.
+// git add . or git add --all 하면 모든 파일이 초록색으로 변함. 현재 스테이징 영역에 잘 올라간 것이다.
 // git commit -m => 어떠한 메시지를 사용해서 커밋할 것인지 작성하는 것임. => git commit -m "깃 저장소 초기화"
 // git remote -v => 현재 워킹 디렉토리 가르켜주기
 // git remote add origin(이라는 이름) => +내 repository 복사해서 붙여넣기 하면 돼 암묵적인 룰.
@@ -51,4 +51,9 @@ module.exports = app;
 
 // 노드몬 : 라이브 서버 구동 => nodemon ./bin/www.js
 
+// git tag v0.1.0 => 태그로 버전 입력해주기
+// git push origin v0.1.0--notDB => 하고 To~url 등등 나오면 잘된 것임.
+// git push origin :v0.1.0--notDB => 콜론은 태그 삭제임.
+// git tag -d v0.1.0--notDB => 로컬에서 태그 삭제
+// git log --oneline => 그동안 커밋 내용 한줄로 확인하기
 
