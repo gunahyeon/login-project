@@ -8,11 +8,16 @@ var registerBtn = document.querySelector("#button");
 registerBtn.addEventListener("click", register);
 
 function register() {
+    if (!id.value) return alert("아이디를 입력해주십시오.");
+    if (!username.value) return alert("이름을 입력해주십시오.");
+    if (!psword.value) return alert("비밀번호를 입력해주십시오.");
+    if (!confirmPsword.value) return alert("비밀번호 확인란을 입력해주십시오.");
+    if(psword.value !== confirmPsword.value) return alert("비밀번호가 일치하지 않습니다.");
+
     const req = {
         id : id.value,
         name : username.value,
         psword : psword.value,
-        confirmPsword : confirmPsword.value,
     };
     console.log(req);
 //라우터에게 요청한다.
