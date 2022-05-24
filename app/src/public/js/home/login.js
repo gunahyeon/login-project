@@ -12,6 +12,7 @@ function login() {
         psword : psword.value,
     };
 
+//라우터에게 요청한다.
 fetch("/login", {
     method: "POST",
     headers: {
