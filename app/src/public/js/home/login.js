@@ -2,7 +2,7 @@
  
 const id = document.querySelector("#id"); //선택자
 var psword = document.querySelector("#psword");
-var loginBtn = document.querySelector("button");
+var loginBtn = document.querySelector("#button");
 
 loginBtn.addEventListener("click", login);
 
