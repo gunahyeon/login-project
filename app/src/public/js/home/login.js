@@ -18,5 +18,5 @@ fetch("/login", {
         "Content-Type" : "application/json",
     },
     body: JSON.stringify(req),
-});
+}).then((res)=> res.json()).then((res)=>console.log(res)); //반환값이 Promise, .json()을 해줘야 다 읽는다.
 }
