@@ -12,7 +12,7 @@ const home = require("./src/routes/home");
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
  
-app.use(express.static(`${__dirname}/src/public`)); // js파일을 사용하기 위한 익스프레스, 정적 파일 사용, ${__dirname}은 현재 app.js가 있는 위치를 반환한다.ㅇ
+app.use(express.static(`${__dirname}/src/public`)); // static 파일을 사용하기 위한 익스프레스, 정적 파일 사용, ${__dirname}은 현재 app.js가 있는 위치를 반환한다.ㅇ
 app.use(bodyParser.json()); // 파서가 제이슨 해석할 수 있게해줌.
 app.use(bodyParser.urlencoded({extended:true})); //url을 통해 전달되는 데이터에 한글, 공백 등과 같은 문자가 포함될 경우 제대로 인식되지 않는 문제 해결.
 
