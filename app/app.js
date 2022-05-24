@@ -2,6 +2,7 @@
 
 //모듈
 const express = require('express'); //서버모듈 부르기
+const bodyParser = require("body-parser"); //post body보는 방법, npm install body-parser --save
 const app = express(); //서버 구동
 
 //라우팅
@@ -12,6 +13,9 @@ app.set("views", "./src/views");
 app.set("view engine", "ejs");
  
 app.use(express.static(`${__dirname}/src/public`)); // js파일을 사용하기 위한 익스프레스, 정적 파일 사용, ${__dirname}은 현재 app.js가 있는 위치를 반환한다.ㅇ
+app.use(bodyParser.json()); // 파서가 제이슨 해석할 수 있게해줌.
+app.use(bodyParser.urlencoded({extended:true})); //url을 통해 전달되는 데이터에 한글, 공백 등과 같은 문자가 포함될 경우 제대로 인식되지 않는 문제 해결.
+
 app.use("/", home); //use -> 미들웨어를 등록해주는 메서드.
 
 module.exports = app;
