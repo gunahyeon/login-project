@@ -11,6 +11,7 @@ const home = require("./src/routes/home");
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
  
+app.use(express.static(`${__dirname}/src/public`)); // js파일을 사용하기 위한 익스프레스, 정적 파일 사용, ${__dirname}은 현재 app.js가 있는 위치를 반환한다.ㅇ
 app.use("/", home); //use -> 미들웨어를 등록해주는 메서드.
 
 module.exports = app;
