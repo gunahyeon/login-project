@@ -3,6 +3,9 @@
 //모듈
 const express = require('express'); //서버모듈 부르기
 const bodyParser = require("body-parser"); //post body보는 방법, npm install body-parser --save
+const dotenv = require("dotenv"); //환경변수 등록해주는 방법 운영체제가 달라도 실행이가능하다.
+dotenv.config(); //.env.파일에 접근하는 함수.
+
 const app = express(); //서버 구동
 
 //라우팅

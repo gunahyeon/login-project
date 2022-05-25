@@ -1,4 +1,9 @@
 //로그인, 회원가입 기능 구현하기.
+/**
+ * User.js : 해당 데이터 검증 및 조작하는 file
+ * 
+ */
+
 "use strict";
 
 const UserStorage = require("./UserStorage");
@@ -18,6 +23,7 @@ class User {
         //promise를 반환하는 애에게만 await적용할 수 있음!!! => 가독성
         //await은 async 함수 내에서만 사용할 수 있음 => 짝궁
         //async 는 await이 실행되는 함수 앞에서만 걸어줘야한다.
+        try {
         const {id, psword} = await UserStorage.getUserInfo(client.id);
         
         //일단 스토리지에 id값이 있는지 확인.
@@ -29,7 +35,10 @@ class User {
             return {success: false, msg: "비밀번호가 틀렸습니다."};
         }
         return {success: false, msg: "존재하지 않는 아이디입니다."};
+    } catch(err) {
+        return {seccess : false, msg : err};
     }
+}
 
     async register() {
         const client = this.body;
