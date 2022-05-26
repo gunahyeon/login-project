@@ -1,4 +1,7 @@
 "use strict";
+//mdn http 상태코드 참고하기, status는 백엔드 개발에서 매우 중요한 요소.
+//200대 클라이언트 정상 // 400대 클라이언트 실수
+//500대 서버 측 에러
 
 const logger = require("../../config/logger");
 const { loggers } = require("winston");
@@ -7,15 +10,15 @@ const User = require("../../models/User");
 //get
 const output = {
     home : (req, res) => {
-        logger.info(`GET / 200 "홈 화면으로 이동"`);
+        logger.info(`GET / 304 "홈 화면으로 이동"`); //morgan 은 정상상태를 304로 반환하더라~
         res.render("home/index");
     },    
     login : (req, res) => {
-        logger.info(`GET /login "로그인 화면으로 이동"`);
+        logger.info(`GET /login 304 "로그인 화면으로 이동"`);
         res.render("home/login");
     },
     register : (req, res) => {
-        logger.info(`GET /register "회원가입 화면으로 이동"`);
+        logger.info(`GET /register 304 "회원가입 화면으로 이동"`);
         res.render("home/register");
     }
 }
@@ -28,10 +31,14 @@ const process = {
         //user login요청
         //console은 뜨지만 undefined 가 뜨네 await 붙여주자.
         const response = await user.login();
-        if(response.err) logger.error(`POST /login 200 Response: "success: ${response.success}, ${response.err}"`);
-        else logger.info(`POST /login 200 Response: "success: ${response.success}, msg: ${response.msg}"`);
+        const url = {
+            method:"POST",
+            path:"/login",
+            status: response.err ? 400 : 200,
+        }
+        log(response,url);
         //최종적으로 client 에게 response 전달
-        return res.json(response);
+        return res.status(url.status).json(response);
 
         // 컨트롤러에서 모델을 다루는 건 좋지 않아. model로 분리!
         // const id = req.body.id;
@@ -55,9 +62,27 @@ const process = {
     register : async (req, res) => {
         const user = new User(req.body);
         const response = await user.register();
-        if(response.err) logger.error(`POST /register 200 Response: "success: ${response.success}, ${response.err}"`);
-        else logger.info(`POST /register 200 Response: "success: ${response.success}, msg: ${response.msg}"`);
-        return res.json(response);
+        const url = {
+            method:"POST",
+            path:"/register",
+            status:response.err ? 409 : 201, //새로운 데이터를 생성할때엔 status 201로 반환된다. 
+            //409가 아니라 서버 문제라 원래 500대이지만 이 프로젝트는 앵간해서 클라이언트가 잘못 입력한 경우라 ex)duplicate~ 등, 요청이 서버의 상태와 충돌될 때 보내는 상태이다.
+        }
+        log(response, url);
+        return res.status(url.status).json(response);
+    }
+}
+
+const log = (response, url) => {
+    if(response.err) {
+        logger.error(
+        `${url.method} ${url.path} ${url.status} Response: ${response.success}, ${response.err}`
+        );
+    }
+    else {
+        logger.info(
+        `${url.method} ${url.path} ${url.status} Response: ${response.success}, ${response.msg || ""} `
+        );
     }
 }
 

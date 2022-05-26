@@ -23,20 +23,22 @@ class User {
         //promise를 반환하는 애에게만 await적용할 수 있음!!! => 가독성
         //await은 async 함수 내에서만 사용할 수 있음 => 짝궁
         //async 는 await이 실행되는 함수 앞에서만 걸어줘야한다.
+
+        //const {id, psword} 로 선언했더니 id를 틀리게 입력하면 
+        //resolve가 반환값으로 undefined를 보내더라 그래서 바로 캐치문으로 에러 던져버림 ,,ㅎㅏ,,그렇다면 일단 데이터를 입력한 걸로 검증을 해야하니깐 
+        //입력값을 user로 받아서 비교검증하자.
         try {
-        const {id, psword} = await UserStorage.getUserInfo(client.id);
-        console.log("id" , id);
+        const user = await UserStorage.getUserInfo(client.id);
         //일단 스토리지에 id값이 있는지 확인.
-        if(id) {
+        if(user) {
             //비밀번호 비교
-            if(id === client.id && psword === client.psword) {
+            if(user.id === client.id && user.psword === client.psword) {
                 return {success: true};
             }
             return {success: false, msg: "비밀번호가 틀렸습니다."};
         }
         return {success: false, msg: "존재하지 않는 아이디입니다."};
     } catch(err) {
-        console.log(err);
         return {success : false, err};
     }
 }
