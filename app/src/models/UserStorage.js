@@ -73,7 +73,7 @@ class UserStorage {
     }
 
     static async save(userInfo) {
-        const query = "insert into users(id, username, psword) values (?,?,?)";
+        const query = "insert into users(username, id, psword) values (?,?,?)";
         return new Promise((resolve, reject) => {
             db.query(
                 query,
