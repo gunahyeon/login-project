@@ -33,7 +33,8 @@ class User {
         if(user) {
             //비밀번호 비교
             if(user.id === client.id && user.psword === client.psword) {
-                return {success: true};
+                const displayname = user.username;
+                return {success: true, username : displayname};
             }
             return {success: false, msg: "비밀번호가 틀렸습니다."};
         }

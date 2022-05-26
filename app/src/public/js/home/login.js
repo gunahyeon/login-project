@@ -3,6 +3,7 @@
 const id = document.querySelector("#id"); //선택자
 var psword = document.querySelector("#psword");
 var loginBtn = document.querySelector("#button");
+var displayname = document.querySelector("#displayname");
 
 loginBtn.addEventListener("click", login);
 
@@ -25,7 +26,8 @@ fetch("/login", {
 }).then((res) => res.json()).
     then((res) => {
         if(res.success) {
-            location.href="/";
+            // location.href="/";
+            displayname.innerHTML = `안녕하세요, ${res.username}님!`;
         } else {
             if(res.err) return alert(res.err);
             alert(res.msg);
