@@ -25,7 +25,7 @@ class User {
         //async 는 await이 실행되는 함수 앞에서만 걸어줘야한다.
         try {
         const {id, psword} = await UserStorage.getUserInfo(client.id);
-        
+        console.log("id" , id);
         //일단 스토리지에 id값이 있는지 확인.
         if(id) {
             //비밀번호 비교
@@ -36,7 +36,8 @@ class User {
         }
         return {success: false, msg: "존재하지 않는 아이디입니다."};
     } catch(err) {
-        return {seccess : false, msg : err};
+        console.log(err);
+        return {success : false, err};
     }
 }
 
@@ -46,7 +47,7 @@ class User {
         const response = await UserStorage.save(client);
         return response;
         } catch (err) {
-            return {success : false, msg : err};
+            return {success : false, err};
         }
     }
 }

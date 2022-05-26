@@ -57,8 +57,7 @@ class UserStorage {
             const query = "select * from users where id=?";
             db.query(query,[id], (err, data)=>{
                 if (err) reject(`${err}`);
-                console.log(data[0]);
-                return resolve(data[0]);
+                else return resolve(data[0]);
             });
         });
 
@@ -81,7 +80,7 @@ class UserStorage {
                 [userInfo.username, userInfo.id, userInfo.psword], 
                 (err)=>{
                 if (err) reject(`${err}`);
-                return resolve({success: true});
+                else return resolve({success: true});
             })
         });
 

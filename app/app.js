@@ -3,8 +3,10 @@
 //모듈
 const express = require('express'); //서버모듈 부르기
 const bodyParser = require("body-parser"); //post body보는 방법, npm install body-parser --save
-const dotenv = require("dotenv"); //환경변수 등록해주는 방법 운영체제가 달라도 실행이가능하다.
 // const morgan = require("morgan"); //로그관리 코딩할 때 중요해.
+// const logger = require("./src/config/logger");
+const dotenv = require("dotenv"); //환경변수 등록해주는 방법 운영체제가 달라도 실행이가능하다.
+
 // const accessLogStream = require("./src/config/log.js")
 
 const app = express(); //서버 구동
@@ -12,8 +14,6 @@ dotenv.config(); //.env.파일에 접근하는 함수.
 
 //라우팅
 const home = require("./src/routes/home");
-
-// const logger = require("./src/config/logger");
 
 //앱 세팅
 app.set("views", "./src/views");
@@ -24,6 +24,7 @@ app.use(bodyParser.json()); // 파서가 제이슨 해석할 수 있게해줌.
 app.use(bodyParser.urlencoded({extended:true})); //url을 통해 전달되는 데이터에 한글, 공백 등과 같은 문자가 포함될 경우 제대로 인식되지 않는 문제 해결.
 // app.use(morgan("tiny", {stream : accessLogStream})); // 파일로 저장할 로그 포멧 형식 지정
 // app.use(morgan("dev")); // 콘솔에 로그 표현, 저장하기엔 위험행.
+// app.use(morgan("tiny", {stream:logger.stream}));
 
 app.use("/", home); //use -> 미들웨어를 등록해주는 메서드.
 

@@ -23,3 +23,141 @@
 2022-05-26 07:30:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
 2022-05-26 07:30:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
 2022-05-26 07:30:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:26:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:26:04 [처음 시작하는 백엔드] info : GET / login "로그인 화면으로 이동"
+2022-05-26 08:28:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:28:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:29:04 [처음 시작하는 백엔드] info : GET /register "회원가입 화면으로 이동"
+2022-05-26 08:29:04 [처음 시작하는 백엔드] info : POST /login 200 Response: "success: undefined, msg: undefined"
+2022-05-26 08:29:04 [처음 시작하는 백엔드] info : GET / 200 "홈 화면으로 이동"
+2022-05-26 08:29:04 [처음 시작하는 백엔드] info : GET /register "회원가입 화면으로 이동"
+2022-05-26 08:30:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:31:04 [처음 시작하는 백엔드] info : POST /login 200 Response: "success: undefined, msg: 비밀번호가 틀렸습니다."
+2022-05-26 08:34:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:34:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 08:34:04 [처음 시작하는 백엔드] info : GET /register "회원가입 화면으로 이동"
+2022-05-26 08:34:04 [처음 시작하는 백엔드] info : POST /login 200 Response: "success: undefined, msg: 비밀번호가 틀렸습니다."
+2022-05-26 08:34:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:34:04 [처음 시작하는 백엔드] info : POST /login 200 Response: "success: false, msg: 비밀번호가 틀렸습니다."
+2022-05-26 08:36:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:36:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:37:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:38:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:38:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:40:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:40:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:40:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:41:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:45:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:46:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:46:04 [처음 시작하는 백엔드] info : POST /login 200 Response: "success: false, msg: 비밀번호가 틀렸습니다."
+2022-05-26 08:46:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: undefined, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 08:49:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:49:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 08:50:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:50:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, undefined"
+2022-05-26 08:50:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:50:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 08:52:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:52:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:53:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:53:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:53:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, undefined"
+2022-05-26 08:54:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:54:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, undefined"
+2022-05-26 08:54:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, undefined"
+2022-05-26 08:54:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 08:54:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, undefined"
+2022-05-26 08:55:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 08:55:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 08:55:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 08:57:04 [처음 시작하는 백엔드] info : POST /login 200 Response: "success: false, msg: 비밀번호가 틀렸습니다."
+2022-05-26 08:57:04 [처음 시작하는 백엔드] info : POST /login 200 Response: "success: true, msg: undefined"
+2022-05-26 08:57:04 [처음 시작하는 백엔드] info : GET / 200 "홈 화면으로 이동"
+2022-05-26 08:58:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 08:58:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 08:58:04 [처음 시작하는 백엔드] info : GET /register "회원가입 화면으로 이동"
+2022-05-26 08:59:04 [처음 시작하는 백엔드] error : POST /register 200 Response: "success: false, Error: ER_DUP_ENTRY: Duplicate entry 'gunahyeon' for key 'users.PRIMARY'"
+2022-05-26 09:00:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:00:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:07:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:07:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:07:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:08:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:08:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:08:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:08:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:08:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:11:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:11:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:11:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:12:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:12:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:12:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:12:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:12:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:12:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:12:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:12:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:12:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:12:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:12:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:12:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:12:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:12:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:12:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:12:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:12:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:12:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:13:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:13:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:13:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:14:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:15:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:15:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:15:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:15:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:15:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:16:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:16:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:17:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:17:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:17:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:17:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:17:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:18:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:18:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:18:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:18:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:20:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:22:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:22:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:22:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:22:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:23:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:25:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:26:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:26:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:26:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:26:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:26:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:26:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:26:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:26:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:26:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:26:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:26:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:27:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:27:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:27:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:27:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:27:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:27:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:28:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:28:04 [처음 시작하는 백엔드] error : POST /login 200 Response: "success: false, TypeError: Cannot destructure property 'id' of '(intermediate value)' as it is undefined."
+2022-05-26 09:29:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:31:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:32:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:33:04 [처음 시작하는 백엔드] info : 3000 포트에서 서버가 가동 되었음.
+2022-05-26 09:34:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
+2022-05-26 09:34:04 [처음 시작하는 백엔드] info : GET /login "로그인 화면으로 이동"
