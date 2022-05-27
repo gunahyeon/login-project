@@ -51,11 +51,12 @@ class UserStorage {
     // }
 
     //아이디 받아서 해당하는 유저 정보 던져주기
-    static getUserInfo(id) {
+    static getUserInfo(userid) {
         // mysql은 리턴을 지원해주지 않아서 promise에 작성해야한다. 성공시 resolve, 실패시 reject
         return new Promise((resolve, reject) => {
-            const query = "select * from users where id=?";
-            db.query(query,[id], (err, data)=>{
+            const query = "select * from user where userid=?";
+            db.query(query,[userid], (err, data)=>{
+                console.log(data[0]);
                 if (err) reject(`${err}`);
                 else return resolve(data[0]);
             });
@@ -73,11 +74,11 @@ class UserStorage {
     }
 
     static async save(userInfo) {
-        const query = "insert into users(username, id, psword) values (?,?,?)";
+        const query = "insert into user(username, userid, userpsword) values (?,?,?)";
         return new Promise((resolve, reject) => {
             db.query(
                 query,
-                [userInfo.username, userInfo.id, userInfo.psword], 
+                [userInfo.username, userInfo.userid, userInfo.userpsword], 
                 (err)=>{
                 if (err) reject(`${err}`);
                 else return resolve({success: true});

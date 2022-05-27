@@ -28,11 +28,11 @@ class User {
         //resolve가 반환값으로 undefined를 보내더라 그래서 바로 캐치문으로 에러 던져버림 ,,ㅎㅏ,,그렇다면 일단 데이터를 입력한 걸로 검증을 해야하니깐 
         //입력값을 user로 받아서 비교검증하자.
         try {
-        const user = await UserStorage.getUserInfo(client.id);
+        const user = await UserStorage.getUserInfo(client.userid);
         //일단 스토리지에 id값이 있는지 확인.
         if(user) {
             //비밀번호 비교
-            if(user.id === client.id && user.psword === client.psword) {
+            if(user.userid === client.userid && user.userpsword === client.userpsword) {
                 const displayname = user.username;
                 return {success: true, username : displayname};
             }

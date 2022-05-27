@@ -1,19 +1,19 @@
 "use strict";
  
-const id = document.querySelector("#id"); //선택자
-var psword = document.querySelector("#psword");
+const userid = document.querySelector("#userid"); //선택자
+var userpsword = document.querySelector("#userpsword");
 var loginBtn = document.querySelector("#button");
 var displayname = document.querySelector("#displayname");
 
 loginBtn.addEventListener("click", login);
 
 function login() {
-    if (!id.value) return alert("아이디를 입력해주십시오.");
-    if (!psword.value) return alert("비밀번호를 입력해주십시오.");
+    if (!userid.value) return alert("아이디를 입력해주십시오.");
+    if (!userpsword.value) return alert("비밀번호를 입력해주십시오.");
 
     const req = {
-        id : id.value,
-        psword : psword.value,
+        userid : userid.value,
+        userpsword : userpsword.value,
     };
 
 //라우터에게 요청한다.
