@@ -6,6 +6,8 @@
 const logger = require("../../config/logger");
 const { loggers } = require("winston");
 const User = require("../../models/User");
+// const jwt = require("../../modules/jwt");
+const crypto = require("crypto");
 
 //get
 const output = {
@@ -26,8 +28,18 @@ const output = {
 //post
 const process = {
     login : async (req, res) => {
+        var key = "rnskqkd";
+        const ciper = crypto.createCipher('aes192',key);
+        var encrypted_password = ciper.update(req.body.userpsword, 'utf8', 'hex');
+        encrypted_password += ciper.final('hex');
+        const deciper = crypto.createDecipher('aes192', key);
+        var target = encrypted_password;
+        var decryped = deciper.update(target,'hex','utf8');
+        decryped += deciper.final('utf8');
+        console.log("암호화된 패스워드 : ", encrypted_password);
+        console.log("복호화된 패스워드 : ", decryped);
         //클래스에 요청데이터를 보내서 user를 인스턴스화(초기화)
-        const user = new User(req.body);
+        const user = new User({userid : req.body.userid, userpsword : encrypted_password});
         //user login요청
         //console은 뜨지만 undefined 가 뜨네 await 붙여주자.
         const response = await user.login();
@@ -37,6 +49,7 @@ const process = {
             status: response.err ? 400 : 200,
         }
         log(response,url);
+        // const jwtToken = await jwt.sign(user);
         //최종적으로 client 에게 response 전달
         return res.status(url.status).json(response);
 
@@ -60,7 +73,16 @@ const process = {
         // return res.json(response);
     },
     register : async (req, res) => {
-        const user = new User(req.body);
+        // const hash = crypto.createHash("sha256");
+        // hash.update(req.body.userpsword);
+        // var hash_password = hash.digest('hex');
+        var key = "rnskqkd";
+        const ciper = crypto.createCipher('aes192',key);
+        var encrypted_password = ciper.update(req.body.userpsword, 'utf8', 'hex');
+        encrypted_password += ciper.final('hex');
+
+        const user = new User({userid : req.body.userid, username : req.body.username, userpsword : encrypted_password});
+        console.log('암호화된 패스워드 :' ,encrypted_password);
         const response = await user.register();
         const url = {
             method:"POST",
