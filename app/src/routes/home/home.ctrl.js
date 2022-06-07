@@ -6,8 +6,8 @@
 const logger = require("../../config/logger");
 const { loggers } = require("winston");
 const User = require("../../models/User");
-// const jwt = require("../../modules/jwt");
 const crypto = require("crypto");
+// const jwt = require("jsonwebtoken");
 
 //get
 const output = {
@@ -22,24 +22,32 @@ const output = {
     register : (req, res) => {
         logger.info(`GET /register 304 "회원가입 화면으로 이동"`);
         res.render("home/register");
-    }
+    },
+    todo : (req, res) => {
+        logger.info(`GET /todo 304 "todo 화면으로 이동"`);
+        res.render("home/todo");
+    },
 }
 
 //post
 const process = {
     login : async (req, res) => {
-        var key = "rnskqkd";
-        const ciper = crypto.createCipher('aes192',key);
-        var encrypted_password = ciper.update(req.body.userpsword, 'utf8', 'hex');
-        encrypted_password += ciper.final('hex');
-        const deciper = crypto.createDecipher('aes192', key);
-        var target = encrypted_password;
-        var decryped = deciper.update(target,'hex','utf8');
-        decryped += deciper.final('utf8');
-        console.log("암호화된 패스워드 : ", encrypted_password);
-        console.log("복호화된 패스워드 : ", decryped);
+        const hash = crypto.createHash("sha256");
+        hash.update(req.body.userpsword);
+        var hash_password = hash.digest("hex");
+        // res.send(token);
+        // var key = "rnskqkd";
+        // const ciper = crypto.createCipher('aes192',key);
+        // var encrypted_password = ciper.update(req.body.userpsword, 'utf8', 'hex');
+        // encrypted_password += ciper.final('hex');
+        // const deciper = crypto.createDecipher('aes192', key);
+        // var target = encrypted_password;
+        // var decryped = deciper.update(target,'hex','utf8');
+        // decryped += deciper.final('utf8');
+        // console.log("암호화된 패스워드 : ", encrypted_password);
+        // console.log("복호화된 패스워드 : ", decryped);
         //클래스에 요청데이터를 보내서 user를 인스턴스화(초기화)
-        const user = new User({userid : req.body.userid, userpsword : encrypted_password});
+        const user = new User({userid : req.body.userid, userpsword : hash_password});
         //user login요청
         //console은 뜨지만 undefined 가 뜨네 await 붙여주자.
         const response = await user.login();
@@ -73,22 +81,22 @@ const process = {
         // return res.json(response);
     },
     register : async (req, res) => {
-        // const hash = crypto.createHash("sha256");
-        // hash.update(req.body.userpsword);
-        // var hash_password = hash.digest('hex');
-        var key = "rnskqkd";
-        const ciper = crypto.createCipher('aes192',key);
-        var encrypted_password = ciper.update(req.body.userpsword, 'utf8', 'hex');
-        encrypted_password += ciper.final('hex');
+        const hash = crypto.createHash("sha256");
+        hash.update(req.body.userpsword);
+        var hash_password = hash.digest('hex');
+        // var key = "rnskqkd";
+        // const ciper = crypto.createCipher('aes192',key);
+        // var encrypted_password = ciper.update(req.body.userpsword, 'utf8', 'hex');
+        // encrypted_password += ciper.final('hex');
 
-        const user = new User({userid : req.body.userid, username : req.body.username, userpsword : encrypted_password});
-        console.log('암호화된 패스워드 :' ,encrypted_password);
+        const user = new User({userid : req.body.userid, username : req.body.username, userpsword : hash_password});
         const response = await user.register();
         const url = {
             method:"POST",
             path:"/register",
             status:response.err ? 409 : 201, //새로운 데이터를 생성할때엔 status 201로 반환된다. 
             //409가 아니라 서버 문제라 원래 500대이지만 이 프로젝트는 앵간해서 클라이언트가 잘못 입력한 경우라 ex)duplicate~ 등, 요청이 서버의 상태와 충돌될 때 보내는 상태이다.
+            
         }
         log(response, url);
         return res.status(url.status).json(response);

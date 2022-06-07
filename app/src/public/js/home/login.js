@@ -4,7 +4,6 @@ const userid = document.querySelector("#userid"); //선택자
 var userpsword = document.querySelector("#userpsword");
 var loginBtn = document.querySelector("#button");
 var displayname = document.querySelector("#displayname");
-
 loginBtn.addEventListener("click", login);
 
 function login() {
@@ -15,6 +14,7 @@ function login() {
         userid : userid.value,
         userpsword : userpsword.value,
     };
+
 
 //라우터에게 요청한다.
 fetch("/login", {
