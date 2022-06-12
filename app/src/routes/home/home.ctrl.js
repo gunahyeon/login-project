@@ -23,10 +23,6 @@ const output = {
         logger.info(`GET /register 304 "회원가입 화면으로 이동"`);
         res.render("home/register");
     },
-    todo : (req, res) => {
-        logger.info(`GET /todo 304 "todo 화면으로 이동"`);
-        res.render("home/todo");
-    },
 }
 
 //post
