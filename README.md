@@ -1,5 +1,13 @@
-# login-project
-처음으로 시작하는 백엔드
+# 개발환경
+* Node.js
+* View ejs
+* AWS
+
+# 사용기술
+* express
+* crypto
+* winston
+* dotenv
 
 # 개발후기
 * router 요청마다 express내에서 이루어지는 이벤트들을 로그 기록(morgan-logger)으로 남겨볼 수 있는 시간이었다.
